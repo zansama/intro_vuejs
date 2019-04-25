@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div id="app">
+    <h1 :class="{ red: active }">{{ value_test }}</h1>
+
+    <label>Name:</label>
+    <input type="text" v-model="value_test"/>
+
+    <h2 :class="{ red: active }">{{ message }}</h2>
+    <input type="text" v-model="changeMessage"/>
+
+    <button v-on:click="newMessage">New Message</button>
+    <!--<button @click="active = !active">Color change !!!</button>-->
+    <input type="checkbox" id="checkbox" v-model="active">
+    <label for="checkbox">Color change !!!</label>
+<br>
+    <br>
+    <br>
+
+    <input type="checkbox" id="checkb" v-model="hide">
+    <label for="checkb">Je suis cacher</label>
+    <br>
+    <img src="rick.jpg" :class="{ cacher: hide }"></img>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
